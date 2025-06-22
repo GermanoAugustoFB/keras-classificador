@@ -1,13 +1,17 @@
 from config import EPOCHS
 import matplotlib.pyplot as plt
 
+"""
+    Trains the model and evaluates it on the test set.
+    Treina o modelo e avalia nos dados de teste.
+"""
+
 def train(model, train_images, train_labels, test_images, test_labels):
     history = model.fit(train_images, train_labels, epochs=EPOCHS, validation_split=0.1)
 
     test_loss, test_acc = model.evaluate(test_images, test_labels, verbose=2)
     print(f'\nAcurácia no teste: {test_acc:.4f}')
 
-    # (Opcional) Mostrar gráfico de treinamento
     plot_history(history)
 
 def plot_history(history):

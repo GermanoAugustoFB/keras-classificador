@@ -1,6 +1,13 @@
 from tensorflow.keras.datasets import fashion_mnist
 import numpy as np
 
+"""
+    Loads the Fashion MNIST dataset and normalizes the images
+    so that pixel values are between 0 and 1.
+    Returns:
+        (train_images, train_labels), (test_images, test_labels)
+"""
+
 def load_data():
     (train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
 

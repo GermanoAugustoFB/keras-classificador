@@ -2,6 +2,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 from config import CLASS_NAMES
 
+"""
+    Plots training and validation accuracy and loss.
+    Plota a acurácia e a perda de treino e validação.
+"""
+
 def plot_sample_images(images, labels, num=25):
     plt.figure(figsize=(10, 10))
     for i in range(num):
